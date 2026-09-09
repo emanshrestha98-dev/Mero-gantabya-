@@ -1,1 +1,482 @@
-*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:Arial,"Noto Sans Devanagari",sans-serif;color:#17202a;background:#fff;line-height:1.6}.container{width:min(1100px,92%);margin:auto}header{background:#fff;border-bottom:1px solid #e5e7eb;position:sticky;top:0;z-index:10}.nav{min-height:74px;display:flex;align-items:center;justify-content:space-between}.brand{text-decoration:none;color:#17202a;display:flex;flex-direction:column}.brand b{font-size:24px}.brand small{font-size:9px;letter-spacing:2px;color:#6b7280}nav{display:flex;gap:22px}nav a{color:#26364a;text-decoration:none;font-weight:bold;font-size:14px}nav a:hover{color:#b91c1c}.menu{display:none;border:0;background:none;font-size:27px}.ticker{background:#b91c1c;color:white}.ticker .container{min-height:40px;display:flex;gap:14px;align-items:center;font-size:13px}.ticker strong{background:#fff;color:#b91c1c;padding:3px 7px;border-radius:3px;font-size:10px}.hero{padding:65px 0;display:grid;grid-template-columns:1.2fr .8fr;gap:45px;align-items:center}.label{font-size:13px;font-weight:bold;color:#b91c1c}.hero h1{font-size:clamp(38px,6vw,62px);line-height:1.1;margin:10px 0 18px}.hero p{font-size:17px;color:#64748b;max-width:650px}.btn{display:inline-block;background:#b91c1c;color:#fff;text-decoration:none;padding:10px 17px;border-radius:5px;font-weight:bold;margin:8px 6px 0 0}.btn.secondary{background:#17202a}.hero-box{border:1px solid #ddd;border-radius:9px;padding:18px}.camera,.live-photo,.thumb,.gallery div{background:#e9edf2;color:#667085;display:grid;place-items:center;font-weight:bold}.camera{height:180px;font-size:32px}.hero-box h3{margin-bottom:2px}.hero-box span{font-size:12px;color:#7b8490}.section{padding:55px 0}.gray{background:#f6f7f9}.heading{display:flex;justify-content:space-between;align-items:baseline;border-bottom:2px solid #17202a;margin-bottom:24px}.heading h2{margin:0 0 8px}.heading span{font-size:11px;color:#7b8490}.live-card{display:grid;grid-template-columns:.9fr 1.1fr;border:1px solid #e1e5ea;border-radius:8px;overflow:hidden;background:#fff}.live-photo{min-height:270px}.score{padding:28px}.status{color:#b91c1c;font-size:12px;font-weight:bold}.score h3{font-size:25px}.teams{display:flex;justify-content:space-between;align-items:center;gap:10px;font-size:18px}.teams strong{font-size:30px}.score p{color:#697586}.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}.cards article{border:1px solid #e1e5ea;border-radius:7px;overflow:hidden;background:white;padding-bottom:16px}.thumb{height:150px}.cards article h3,.cards article p,.cards article small{margin-left:16px;margin-right:16px}.cards article h3{line-height:1.35}.cards article p{color:#697586}.cards small{display:block;color:#8a94a3;margin-top:12px}.gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}.gallery div{height:170px;border-radius:5px}.hint{text-align:center;color:#7b8490}.facebook{padding:65px 0;display:flex;justify-content:space-between;align-items:center;gap:20px}.facebook h2{font-size:30px;margin:5px 0}.facebook p{color:#697586}footer{background:#17202a;color:#fff;padding:35px 0}footer p,footer small{color:#c6ced8} @media(max-width:760px){nav{display:none;position:absolute;top:74px;left:0;right:0;background:#fff;padding:16px 4%;flex-direction:column;gap:14px;border-bottom:1px solid #ddd}nav.show{display:flex}.menu{display:block}.hero{grid-template-columns:1fr;padding:42px 0}.live-card{grid-template-columns:1fr}.cards{grid-template-columns:1fr}.gallery{grid-template-columns:repeat(2,1fr)}.facebook{display:block}.hero h1{font-size:42px}}
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, "Noto Sans Devanagari", sans-serif;
+  color: #17202a;
+  background: #fff;
+  line-height: 1.6;
+  -webkit-text-size-adjust: 100%;
+}
+
+.container {
+  width: min(1100px, 92%);
+  margin: auto;
+}
+
+header {
+  background: #fff;
+  border-bottom: 1px solid #e5e7eb;
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  box-shadow: 0 2px 12px rgba(0,0,0,.04);
+}
+
+.nav {
+  min-height: 68px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.brand {
+  text-decoration: none;
+  color: #17202a;
+  display: flex;
+  flex-direction: column;
+}
+
+.brand b {
+  font-size: 22px;
+  line-height: 1.2;
+}
+
+.brand small {
+  font-size: 8px;
+  letter-spacing: 2px;
+  color: #6b7280;
+}
+
+nav {
+  display: flex;
+  gap: 22px;
+}
+
+nav a {
+  color: #26364a;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.menu {
+  display: none;
+  border: 0;
+  background: #f3f4f6;
+  font-size: 24px;
+  width: 42px;
+  height: 42px;
+  border-radius: 10px;
+}
+
+.ticker {
+  background: #b91c1c;
+  color: white;
+}
+
+.ticker .container {
+  min-height: 38px;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  font-size: 12px;
+  overflow: hidden;
+}
+
+.ticker span {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.ticker strong {
+  background: #fff;
+  color: #b91c1c;
+  padding: 3px 7px;
+  border-radius: 4px;
+  font-size: 9px;
+  flex: none;
+}
+
+.hero {
+  padding: 54px 0;
+  display: grid;
+  grid-template-columns: 1.2fr .8fr;
+  gap: 40px;
+  align-items: center;
+}
+
+.label {
+  font-size: 12px;
+  font-weight: bold;
+  color: #b91c1c;
+}
+
+.hero h1 {
+  font-size: clamp(38px, 6vw, 62px);
+  line-height: 1.1;
+  margin: 9px 0 16px;
+  letter-spacing: -1px;
+}
+
+.hero p {
+  font-size: 16px;
+  color: #64748b;
+  max-width: 650px;
+}
+
+.btn {
+  display: inline-block;
+  background: #b91c1c;
+  color: #fff;
+  text-decoration: none;
+  padding: 11px 17px;
+  border-radius: 8px;
+  font-weight: bold;
+  margin: 8px 6px 0 0;
+  box-shadow: 0 3px 10px rgba(185,28,28,.14);
+}
+
+.btn.secondary {
+  background: #17202a;
+}
+
+.hero-box {
+  border: 1px solid #e2e5e9;
+  border-radius: 14px;
+  padding: 14px;
+  box-shadow: 0 8px 25px rgba(15,23,42,.06);
+}
+
+.camera,
+.live-photo,
+.thumb,
+.gallery div {
+  background: #edf0f3;
+  color: #667085;
+  display: grid;
+  place-items: center;
+  font-weight: bold;
+}
+
+.camera {
+  height: 210px;
+  font-size: 32px;
+  border-radius: 10px;
+}
+
+.hero-box h3 {
+  margin: 12px 0 2px;
+}
+
+.hero-box span {
+  font-size: 12px;
+  color: #7b8490;
+}
+
+.section {
+  padding: 52px 0;
+}
+
+.gray {
+  background: #f6f7f9;
+}
+
+.heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  border-bottom: 2px solid #17202a;
+  margin-bottom: 22px;
+}
+
+.heading h2 {
+  margin: 0 0 8px;
+  font-size: 24px;
+}
+
+.heading span {
+  font-size: 10px;
+  color: #7b8490;
+}
+
+.live-card {
+  display: grid;
+  grid-template-columns: .9fr 1.1fr;
+  border: 1px solid #e1e5ea;
+  border-radius: 12px;
+  overflow: hidden;
+  background: #fff;
+  box-shadow: 0 7px 22px rgba(15,23,42,.05);
+}
+
+.live-photo {
+  min-height: 270px;
+}
+
+.score {
+  padding: 26px;
+}
+
+.status {
+  color: #b91c1c;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.score h3 {
+  font-size: 24px;
+}
+
+.teams {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  font-size: 18px;
+}
+
+.teams strong {
+  font-size: 30px;
+}
+
+.score p {
+  color: #697586;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+}
+
+.cards article {
+  border: 1px solid #e1e5ea;
+  border-radius: 12px;
+  overflow: hidden;
+  background: white;
+  padding-bottom: 16px;
+  box-shadow: 0 5px 18px rgba(15,23,42,.04);
+}
+
+.thumb {
+  height: 150px;
+}
+
+.cards article h3,
+.cards article p,
+.cards article small {
+  margin-left: 16px;
+  margin-right: 16px;
+}
+
+.cards article h3 {
+  line-height: 1.35;
+}
+
+.cards article p {
+  color: #697586;
+}
+
+.cards small {
+  display: block;
+  color: #8a94a3;
+  margin-top: 12px;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+}
+
+.gallery div {
+  height: 170px;
+  border-radius: 8px;
+}
+
+.hint {
+  text-align: center;
+  color: #7b8490;
+}
+
+.facebook {
+  padding: 52px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+
+.facebook h2 {
+  font-size: 28px;
+  margin: 5px 0;
+}
+
+.facebook p {
+  color: #697586;
+}
+
+footer {
+  background: #17202a;
+  color: #fff;
+  padding: 32px 0;
+}
+
+footer p,
+footer small {
+  color: #c6ced8;
+}
+
+
+/* MOBILE DESIGN */
+
+@media (max-width: 760px) {
+
+  .container {
+    width: min(100% - 28px, 1100px);
+  }
+
+  .nav {
+    min-height: 62px;
+  }
+
+  .brand b {
+    font-size: 20px;
+  }
+
+  .menu {
+    display: block;
+  }
+
+  nav {
+    display: none;
+    position: absolute;
+    top: 62px;
+    left: 0;
+    right: 0;
+    background: #fff;
+    padding: 12px 14px;
+    flex-direction: column;
+    gap: 0;
+    border-bottom: 1px solid #ddd;
+    box-shadow: 0 8px 18px rgba(0,0,0,.08);
+  }
+
+  nav.show {
+    display: flex;
+  }
+
+  nav a {
+    padding: 11px 4px;
+    border-bottom: 1px solid #f0f0f0;
+  }
+
+  .ticker .container {
+    min-height: 36px;
+  }
+
+  .hero {
+    grid-template-columns: 1fr;
+    padding: 34px 0 38px;
+    gap: 26px;
+  }
+
+  .hero h1 {
+    font-size: 40px;
+    letter-spacing: -.5px;
+  }
+
+  .hero p {
+    font-size: 15px;
+    line-height: 1.7;
+  }
+
+  .btn {
+    padding: 11px 15px;
+  }
+
+  .hero-box {
+    padding: 11px;
+  }
+
+  .camera {
+    height: 180px;
+  }
+
+  .section {
+    padding: 38px 0;
+  }
+
+  .heading h2 {
+    font-size: 21px;
+  }
+
+  .live-card {
+    grid-template-columns: 1fr;
+  }
+
+  .live-photo {
+    min-height: 180px;
+  }
+
+  .score {
+    padding: 20px;
+  }
+
+  .score h3 {
+    font-size: 21px;
+  }
+
+  .teams {
+    font-size: 15px;
+  }
+
+  .teams strong {
+    font-size: 26px;
+  }
+
+  .cards {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+
+  .thumb {
+    height: 165px;
+  }
+
+  .gallery {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 9px;
+  }
+
+  .gallery div {
+    height: 125px;
+  }
+
+  .facebook {
+    display: block;
+    padding: 40px 0;
+  }
+
+  .facebook h2 {
+    font-size: 23px;
+  }
+
+  .facebook .btn {
+    margin-top: 14px;
+  }
+
+  footer {
+    padding: 28px 0;
+    font-size: 14px;
+  }
+
+}
