@@ -3,320 +3,496 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Mero Gantabya - स्थानीय खेलकुदको लाइभ अपडेट, स्कोर, समाचार र फोटो।">
-  <title>Mero Gantabya | Local Sports</title>
+
+  <meta name="description"
+    content="मेरो गन्तव्य - स्थानीय खेलकुदका लाइभ स्कोर, समाचार, फोटो र अपडेट।">
+
+  <title>मेरो गन्तव्य | Local Sports</title>
+
   <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-<header>
-  <div class="container nav">
+<!-- ================= HEADER ================= -->
 
-    <a class="brand" href="#">
-      <b>मेरो गन्तव्य</b>
-      <small>LOCAL SPORTS</small>
+<header class="site-header">
+
+  <div class="container header-inner">
+
+    <a href="#home" class="logo">
+      <span class="logo-main">मेरो गन्तव्य</span>
+      <span class="logo-sub">LOCAL SPORTS</span>
     </a>
 
-    <button class="menu" onclick="toggleMenu()">☰</button>
+    <button class="menu-btn" onclick="toggleMenu()" aria-label="Menu">
+      ☰
+    </button>
 
-    <nav id="nav">
+    <nav id="mainNav">
       <a href="#home">होम</a>
-      <a href="#live">लाइभ</a>
-      <a href="#updates">अपडेट</a>
+      <a href="#live">🔴 लाइभ</a>
+      <a href="#news">समाचार</a>
       <a href="#photos">फोटो</a>
       <a href="#facebook">Facebook</a>
     </nav>
 
   </div>
+
 </header>
 
 
-<section class="ticker">
-  <div class="container">
-    <strong>LIVE UPDATE</strong>
-    <span id="ticker">
-      स्थानीय खेलकुदका ताजा अपडेट यहाँ देखिनेछन्।
-    </span>
-  </div>
-</section>
+<!-- ================= BREAKING NEWS ================= -->
 
+<div class="breaking">
+
+  <div class="container breaking-inner">
+
+    <span class="breaking-label">BREAKING</span>
+
+    <div class="breaking-text">
+      स्थानीय खेलकुदका ताजा अपडेट र समाचारहरू मेरो गन्तव्यमा।
+    </div>
+
+  </div>
+
+</div>
+
+
+<!-- ================= HERO ================= -->
 
 <main id="home">
 
-  <!-- HERO -->
-  <section class="hero container">
+<section class="hero">
 
-    <div>
+  <div class="container hero-grid">
 
-      <span class="label">स्थानीय खेलकुद</span>
+    <div class="hero-content">
+
+      <div class="live-badge">
+        <span></span> LIVE SPORTS
+      </div>
 
       <h1>
-        खेल मैदानबाट<br>
-        सिधै तपाईंको मोबाइलमा।
+        खेल मैदानबाट
+        <strong>सिधै तपाईंको मोबाइलमा।</strong>
       </h1>
 
       <p>
-        स्थानीय फुटबल, क्रिकेट तथा अन्य खेलका लाइभ स्कोर,
-        खेल अपडेट, समाचार र फोटो एउटै ठाउँमा।
+        स्थानीय फुटबल, क्रिकेट तथा अन्य खेलका
+        लाइभ स्कोर, समाचार, फोटो र महत्वपूर्ण अपडेट।
       </p>
 
-      <a class="btn" href="#live">
-        🔴 लाइभ हेर्नुहोस्
-      </a>
+      <div class="hero-buttons">
 
-      <a class="btn secondary" href="#photos">
-        📸 फोटो हेर्नुहोस्
-      </a>
+        <a href="#live" class="primary-btn">
+          🔴 LIVE MATCH
+        </a>
 
-    </div>
+        <a href="#news" class="outline-btn">
+          समाचार हेर्नुहोस् →
+        </a>
 
-
-    <div class="hero-box">
-
-      <div class="camera">
-        LIVE
       </div>
 
-      <h3>आजको खेल</h3>
+      <div class="hero-stats">
 
-      <p>
-        टिम A <b>0 - 0</b> टिम B
-      </p>
-
-      <span>
-        खेल सुरु भएपछि यहाँ लाइभ स्कोर राख्नुहोस्।
-      </span>
-
-    </div>
-
-  </section>
-
-
-  <!-- LIVE SPORTS -->
-  <section id="live" class="section">
-
-    <div class="container">
-
-      <div class="heading">
-        <h2>🔴 Live Sports</h2>
-        <span>LIVE</span>
-      </div>
-
-
-      <div class="live-card">
-
-        <div class="live-photo">
-          LIVE MATCH
+        <div>
+          <strong>LIVE</strong>
+          <span>खेल अपडेट</span>
         </div>
 
+        <div>
+          <strong>24/7</strong>
+          <span>खेल समाचार</span>
+        </div>
 
-        <div class="score">
+        <div>
+          <strong>📸</strong>
+          <span>फोटो</span>
+        </div>
 
-          <span class="status">
-            ● LIVE
-          </span>
+      </div>
 
-          <h3>
-            स्थानीय फुटबल प्रतियोगिता
-          </h3>
+    </div>
 
 
-          <div class="teams">
+    <div class="hero-match">
 
-            <b>Team A</b>
+      <div class="match-top">
 
-            <strong>
-              1 - 0
-            </strong>
+        <span>⚡ FEATURED MATCH</span>
 
-            <b>Team B</b>
+        <b>LIVE</b>
 
+      </div>
+
+      <div class="stadium">
+
+        <div class="stadium-icon">⚽</div>
+
+        <span>LOCAL FOOTBALL</span>
+
+      </div>
+
+      <div class="match-info">
+
+        <small>स्थानीय फुटबल प्रतियोगिता</small>
+
+        <div class="scoreboard">
+
+          <div class="team">
+            <div class="team-icon">A</div>
+            <strong>TEAM A</strong>
           </div>
 
+          <div class="big-score">
+            <strong>1 - 0</strong>
+            <small>2nd Half</small>
+          </div>
+
+          <div class="team">
+            <div class="team-icon">B</div>
+            <strong>TEAM B</strong>
+          </div>
+
+        </div>
+
+        <p>🏟️ स्थानीय खेल मैदान</p>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- ================= LIVE MATCH ================= -->
+
+<section id="live" class="section">
+
+  <div class="container">
+
+    <div class="section-title">
+
+      <div>
+        <span>SPORTS CENTER</span>
+        <h2>🔴 Live Match</h2>
+      </div>
+
+      <a href="#facebook">Facebook Live →</a>
+
+    </div>
+
+
+    <div class="live-match-card">
+
+      <div class="live-header">
+
+        <span>
+          <i></i> LIVE NOW
+        </span>
+
+        <small>FOOTBALL</small>
+
+      </div>
+
+
+      <div class="live-body">
+
+        <div class="live-team">
+
+          <div class="big-team-icon">A</div>
+
+          <h3>TEAM A</h3>
+
+          <span>HOME</span>
+
+        </div>
+
+
+        <div class="live-score">
+
+          <strong>1 : 0</strong>
+
+          <span>62:18</span>
+
+          <small>2nd HALF</small>
+
+        </div>
+
+
+        <div class="live-team">
+
+          <div class="big-team-icon">B</div>
+
+          <h3>TEAM B</h3>
+
+          <span>AWAY</span>
+
+        </div>
+
+      </div>
+
+
+      <div class="match-events">
+
+        <div>
+          <span>⚽</span>
+          <b>GOAL</b>
+          <small>TEAM A · 41'</small>
+        </div>
+
+        <div>
+          <span>🏟️</span>
+          <b>VENUE</b>
+          <small>Local Stadium</small>
+        </div>
+
+        <div>
+          <span>👥</span>
+          <b>STATUS</b>
+          <small>Match Running</small>
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- ================= NEWS ================= -->
+
+<section id="news" class="section news-section">
+
+  <div class="container">
+
+    <div class="section-title">
+
+      <div>
+        <span>LATEST</span>
+        <h2>📰 ताजा खेल समाचार</h2>
+      </div>
+
+      <span class="section-tag">NEWS</span>
+
+    </div>
+
+
+    <div class="news-grid">
+
+      <article class="featured-news">
+
+        <div class="news-image">
+          <span>⚽ FEATURED</span>
+        </div>
+
+        <div class="news-content">
+
+          <span class="category">FOOTBALL</span>
+
+          <h3>
+            स्थानीय फुटबल प्रतियोगिताको नयाँ अपडेट
+          </h3>
 
           <p>
-            समय: 2nd Half · मैदान: स्थानीय खेल मैदान
+            खेल मैदानबाट प्राप्त पछिल्लो जानकारी,
+            स्कोर र महत्वपूर्ण घटनाहरू यहाँ राख्नुहोस्।
           </p>
 
-
-          <a class="btn" href="#facebook">
-            Facebook Live खोल्नुहोस् →
-          </a>
+          <small>आज · केही मिनेटअघि</small>
 
         </div>
+
+      </article>
+
+
+      <div class="small-news">
+
+        <article>
+
+          <div class="small-image">🏆</div>
+
+          <div>
+            <span>RESULT</span>
+            <h3>आजको खेल परिणाम</h3>
+            <small>आज · ३० मिनेटअघि</small>
+          </div>
+
+        </article>
+
+
+        <article>
+
+          <div class="small-image">🏏</div>
+
+          <div>
+            <span>CRICKET</span>
+            <h3>स्थानीय क्रिकेट अपडेट</h3>
+            <small>आज · १ घण्टाअघि</small>
+          </div>
+
+        </article>
+
+
+        <article>
+
+          <div class="small-image">🏅</div>
+
+          <div>
+            <span>SPORTS</span>
+            <h3>प्रतियोगिताको महत्वपूर्ण खबर</h3>
+            <small>हिजो</small>
+          </div>
+
+        </article>
 
       </div>
 
     </div>
 
-  </section>
+  </div>
+
+</section>
 
 
-  <!-- UPDATES -->
-  <section id="updates" class="section container">
+<!-- ================= PHOTOS ================= -->
 
-    <div class="heading">
-      <h2>ताजा खेल अपडेट</h2>
-      <span>UPDATES</span>
-    </div>
+<section id="photos" class="section photos-section">
 
+  <div class="container">
 
-    <div class="cards">
+    <div class="section-title">
 
-      <article>
-
-        <div class="thumb">
-          UPDATE
-        </div>
-
-        <small>
-          आज · ५ मिनेटअघि
-        </small>
-
-        <h3>
-          खेलको नयाँ अपडेट यहाँ लेख्नुहोस्
-        </h3>
-
-        <p>
-          स्कोर, गोल, विकेट वा अन्य महत्वपूर्ण जानकारी
-          छोटकरीमा राख्नुहोस्।
-        </p>
-
-      </article>
-
-
-      <article>
-
-        <div class="thumb">
-          NEWS
-        </div>
-
-        <small>
-          आज · ३० मिनेटअघि
-        </small>
-
-        <h3>
-          स्थानीय प्रतियोगिताको समाचार
-        </h3>
-
-        <p>
-          प्रतियोगिताका मुख्य गतिविधि र परिणाम
-          यहाँ राख्न सकिन्छ।
-        </p>
-
-      </article>
-
-
-      <article>
-
-        <div class="thumb">
-          RESULT
-        </div>
-
-        <small>
-          हिजो
-        </small>
-
-        <h3>
-          आजको खेल परिणाम
-        </h3>
-
-        <p>
-          सम्पन्न खेलको नतिजा र महत्वपूर्ण विवरण
-          यहाँ राख्नुहोस्।
-        </p>
-
-      </article>
-
-    </div>
-
-  </section>
-
-
-  <!-- PHOTO GALLERY -->
-  <section id="photos" class="section gray">
-
-    <div class="container">
-
-      <div class="heading">
-        <h2>📸 खेलकुद फोटो</h2>
-        <span>GALLERY</span>
+      <div>
+        <span>FROM THE FIELD</span>
+        <h2>📸 खेल मैदानका फोटो</h2>
       </div>
 
-
-      <div class="gallery">
-
-        <div>PHOTO 01</div>
-        <div>PHOTO 02</div>
-        <div>PHOTO 03</div>
-        <div>PHOTO 04</div>
-        <div>PHOTO 05</div>
-        <div>PHOTO 06</div>
-
-      </div>
-
-
-      <p class="hint">
-        यहाँ तपाईंले खेलका वास्तविक फोटोहरू राख्न सक्नुहुन्छ।
-      </p>
+      <span class="section-tag">GALLERY</span>
 
     </div>
 
-  </section>
+
+    <div class="photo-grid">
+
+      <div class="photo photo-large">
+        <span>PHOTO 01</span>
+      </div>
+
+      <div class="photo">
+        <span>PHOTO 02</span>
+      </div>
+
+      <div class="photo">
+        <span>PHOTO 03</span>
+      </div>
+
+      <div class="photo">
+        <span>PHOTO 04</span>
+      </div>
+
+      <div class="photo">
+        <span>PHOTO 05</span>
+      </div>
+
+      <div class="photo">
+        <span>PHOTO 06</span>
+      </div>
+
+    </div>
 
 
-  <!-- FACEBOOK -->
-  <section id="facebook" class="facebook container">
+    <p class="gallery-note">
+      📸 यहाँ तपाईंका वास्तविक खेलकुद फोटोहरू राख्न सकिन्छ।
+    </p>
 
-    <div>
+  </div>
 
-      <span class="label">
-        FACEBOOK PAGE
-      </span>
+</section>
+
+
+<!-- ================= FACEBOOK ================= -->
+
+<section id="facebook" class="facebook-section">
+
+  <div class="container facebook-box">
+
+    <div class="facebook-icon">
+      f
+    </div>
+
+    <div class="facebook-content">
+
+      <span>FOLLOW OUR PAGE</span>
 
       <h2>
-        हाम्रो Facebook Page पनि फलो गर्नुहोस्
+        Facebook मा पनि हामीसँग जोडिनुहोस्।
       </h2>
 
       <p>
-        लाइभ भिडियो, तत्काल अपडेट र थप फोटोका लागि
-        हाम्रो Facebook Page मा जोडिनुहोस्।
+        लाइभ भिडियो, तत्काल खेल अपडेट र नयाँ फोटोहरू
+        Facebook Page मा हेर्नुहोस्।
       </p>
 
     </div>
 
-
     <a
-      class="btn"
+      class="facebook-btn"
       href="https://www.facebook.com/share/1DpLrmHJ3x/"
       target="_blank"
       rel="noopener"
     >
-      Facebook Page →
+      Facebook खोल्नुहोस् →
     </a>
 
-  </section>
+  </div>
+
+</section>
 
 </main>
 
 
-<!-- FOOTER -->
+<!-- ================= FOOTER ================= -->
+
 <footer>
 
-  <div class="container">
+  <div class="container footer-grid">
 
-    <b>
-      मेरो गन्तव्य · Mero Gantabya
-    </b>
+    <div>
 
-    <p>
-      स्थानीय खेलकुदको समाचार, लाइभ अपडेट र फोटो।
-    </p>
+      <div class="footer-logo">
+        मेरो गन्तव्य
+      </div>
 
-    <small>
-      © <span id="year"></span> Mero Gantabya
-    </small>
+      <p>
+        स्थानीय खेलकुदको समाचार,
+        लाइभ अपडेट र फोटो।
+      </p>
+
+    </div>
+
+
+    <div class="footer-links">
+
+      <a href="#home">होम</a>
+      <a href="#live">लाइभ</a>
+      <a href="#news">समाचार</a>
+      <a href="#photos">फोटो</a>
+
+    </div>
+
+  </div>
+
+
+  <div class="container copyright">
+
+    © <span id="year"></span> Mero Gantabya · Local Sports
 
   </div>
 
@@ -326,8 +502,13 @@
 <script>
 
 function toggleMenu() {
-  document.getElementById("nav").classList.toggle("show");
+
+  document
+    .getElementById("mainNav")
+    .classList.toggle("active");
+
 }
+
 
 document.getElementById("year").textContent =
   new Date().getFullYear();
